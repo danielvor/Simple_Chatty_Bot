@@ -1,32 +1,57 @@
-# sending greatings
+def greet(bot_name, birth_year):
+    print('Hello! My name is ' + bot_name + '.')
+    print('I was created in ' + birth_year + '.')
 
-print('Greetings My Friend! My name is Guinti.')
-print('I was created in 2021.')
-print('Please, remind me your name.')
-your_name = input()
 
-# reading a name
+def remind_name():
+    print('Please, remind me your name.')
+    name = input()
+    print('What a great name you have, ' + name + '!')
 
-print('What a beautiful name! Nice to meet you, {}'.format(your_name))
 
-# asking remaiders of age
+def guess_age():
+    print('Let me guess your age.')
+    print('Enter remainders of dividing your age by 3, 5 and 7.')
 
-print('Let me guess your age.')
-print('Enter remainders of dividing your age by 3, 5 and 7.')
+    rem3 = int(input())
+    rem5 = int(input())
+    rem7 = int(input())
+    age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
 
-# reading all remainders and printing
+    print("Your age is " + str(age) + "; that's a good time to start programming!")
 
-value = [int(input()) for i in range(3)]
-your_age = (value[0] * 70 + value[1] * 21 + value[2] * 15) % 105
-print("Your age is {}; that's a good time to start programming!".format(your_age))
-print('Now I will prove to you that I can count to any number you want.')
 
-# read a number and count to it here
+def count():
+    print('Now I will prove to you that I can count to any number you want.')
 
-count = 0
-value = int(input())
-for i in range(value+1):
-    print('{} !'.format(count))
-    count+=1
+    num = int(input())
+    curr = 0
+    while curr <= num:
+        print(curr, '!')
+        curr = curr + 1
 
-print('Completed, have a nice day!')
+
+def test():
+    print("Let's test your programming knowledge.")
+    questions = ['Why do we use methods?', '1. To repeat a statement multiple times.', '2. To decompose a program into several small subroutines.',
+                '3. To determine the execution time of a program.', '4. To interrupt the execution of a program.']
+    
+    for q in questions:
+        print(q)
+    
+    while input() != '2':
+        print('Please, try again.')
+
+    print('Completed, have a nice day!')
+
+
+def end():
+    print('Congratulations, have a nice day!')
+
+
+greet('Aid', '2020')  # change it as you need
+remind_name()
+guess_age()
+count()
+test()
+end()
