@@ -1,5 +1,4 @@
-const data = (msg) => {
-    console.log(msg);
+const duno = (duno) => {
+    console.log(duno);
 }
-data('duno')
-data('ju')
+duno('duno')
