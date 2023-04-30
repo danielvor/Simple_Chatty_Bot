@@ -1,4 +1,5 @@
-const duno = (duno) => {
-    console.log(duno);
+const show = (nick) => {
+    console.log(nick);
 }
-duno('duno')
+show('duno')
+show('raquelmiy')
